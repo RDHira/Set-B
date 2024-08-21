@@ -24,8 +24,8 @@ export default function UserList() {
     fetchUsers();
   }, []);
 
-  if (loading) return <div className="text-center text-blue-500">Loading...</div>;
-  if (error) return <div className="text-center text-red-500">Error: {error}</div>;
+  if (loading) return <div className="text-center text-3xl mt-72 font-mono font-bold text-blue-500">Loading...</div>;
+  if (error) return <div className="text-center text-4xl mt-72 font-mono font-bold text-red-500">Error: {error}</div>;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center p-4">
@@ -44,7 +44,6 @@ export default function UserList() {
               </div>
               <div className="flex-grow">
                 <p className="text-lg font-medium text-gray-700">{user.name}</p>
-                <p className="text-sm text-gray-500">{user.email}</p>
               </div>
             </li>
           ))}
